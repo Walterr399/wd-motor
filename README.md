@@ -1,6 +1,6 @@
 ## Description
 
-This script allows players to spawn a Sanchez motorcycle and automatically place themselves on it using the `/motor` command. It includes a cooldown feature, requiring players to wait two minutes before using the command again.
+This script allows players to spawn a Sanchez and automatically place themselves on it using the `/motor` command. It includes a cooldown feature, requiring players to wait two minutes before using the command again.
 
 ---
 
@@ -16,7 +16,7 @@ This script allows players to spawn a Sanchez motorcycle and automatically place
 ## Installation
 
 1. **Download and Extract**  
-   Download the script and place it in your FiveM resource folder.
+   Download the script and place it in your resource folder.
 
 2. **Resource Setup**  
    Add the resource to your `server.cfg` file:
@@ -32,7 +32,7 @@ This script allows players to spawn a Sanchez motorcycle and automatically place
 ## Usage
 
 1. In the game, use the command `/motor` to spawn a motorcycle.
-2. If the command is on cooldown, you will receive an error notification.
+2. If the command is on cooldown, you will receive an info notification.
 
 ---
 
@@ -48,7 +48,7 @@ This script allows players to spawn a Sanchez motorcycle and automatically place
 
 - **Vehicle Model**  
   The script spawns a Sanchez motorcycle by default.  
-  To use a different vehicle, replace `"sanchez"` in `Client.lua` with the desired model name:
+  To use a different vehicle, replace `"sanchez"` in `client.lua` with the desired model name:
   ```lua
   local vehicleHash = GetHashKey("sanchez")
   ```
@@ -57,17 +57,16 @@ This script allows players to spawn a Sanchez motorcycle and automatically place
 
 ## Dependencies
 
-- FiveM
 - Notification system (e.g., `okokNotify`)
 
 ---
 
 ## Files
 
-- **Client.lua**  
+- **client.lua**  
   Handles the vehicle spawning logic.
 
-- **Server.lua**  
+- **server.lua**  
   Manages the `/motor` command and cooldown system.
 
 ---
