@@ -8,7 +8,7 @@ This script allows players to spawn a Sanchez motorcycle and automatically place
 
 - Spawns a Sanchez motorcycle at the player's current location.
 - Automatically places the player on the motorcycle.
-- Implements a 2-minute cooldown to prevent overuse of the `/motor` command.
+- Implements a 2 minute cooldown to prevent overuse of the `/motor` command.
 - Includes a notification system to inform players when the command is on cooldown.
 
 ---
