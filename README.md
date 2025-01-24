@@ -1,5 +1,3 @@
-# README for wd-motor Script
-
 ## Description
 
 This script allows players to spawn a Sanchez motorcycle and automatically place themselves on it using the `/motor` command. It includes a cooldown feature, requiring players to wait two minutes before using the command again.
