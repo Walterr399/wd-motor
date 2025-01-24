@@ -5,7 +5,7 @@ RegisterCommand("motor", function(source, args, rawCommand)
     local currentTime = os.time()
     
     if cooldowns[player] and (currentTime - cooldowns[player]) < 120 then
-        TriggerClientEvent("okokNotify:Alert", player, "WACHT", "Je moet 2 minuten wachten voordat je weer /motor kan doen!", 5000, "error")
+        TriggerClientEvent("okokNotify:Alert", player, "Wacht...", "Je moet 2 minuten wachten voordat je weer /motor kan doen.", 5000, "info")
         return
     end
     
