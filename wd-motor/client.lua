@@ -22,6 +22,7 @@ AddEventHandler("wd-spawnMotor", function()
                 Wait(1000) 
                 if DoesEntityExist(vehicle) then
                     DeleteEntity(vehicle)
+                    TriggerEvent("okokNotify:Alert", "Voertuig", "Je motor is verwijderd!", 3500, "info")
                 end
                 break
             end
