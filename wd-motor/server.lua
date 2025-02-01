@@ -11,5 +11,5 @@ RegisterCommand("motor", function(source, args, rawCommand)
     
     cooldowns[player] = currentTime
     
-    TriggerClientEvent("wd-spawnMotor", player)
+    TriggerClientEvent("wd-spawn", player)
 end, false)
