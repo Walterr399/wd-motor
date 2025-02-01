@@ -1,5 +1,5 @@
-RegisterNetEvent("wd-spawnMotor")
-AddEventHandler("wd-spawnMotor", function()
+RegisterNetEvent("wd-spawn")
+AddEventHandler("wd-spawn", function()
     local player = PlayerPedId()
     local coords = GetEntityCoords(player)
     local heading = GetEntityHeading(player)
