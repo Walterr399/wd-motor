@@ -1,15 +1,17 @@
 local cooldowns = {}
 
+---@param source any
+---@param args any
+---@param rawCommand any
 RegisterCommand("motor", function(source, args, rawCommand)
     local player = source
     local currentTime = os.time()
     
-    if cooldowns[player] and (currentTime - cooldowns[player]) < 120 then
-        TriggerClientEvent("okokNotify:Alert", player, "Wait...", "You must wait 2 minutes before you can use /motor again.", 3500, "info")
+    if cooldowns[player] and (currentTime - cooldowns[player]) < 300 then -- Pas aan let op is in seconden, dus bijv 300 seconden = 5 minuten
+        TriggerClientEvent("okokNotify:Alert", player, "Wacht...", "Je moet 5 minuten wachten voordat je weer /motor kan doen!", 3500, "info")
         return
     end
     
     cooldowns[player] = currentTime
-    
-    TriggerClientEvent("wd-spawn", player)
+    TriggerClientEvent("hm-spawnmotor", player)
 end, false)
