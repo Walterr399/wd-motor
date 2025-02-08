@@ -1,5 +1,5 @@
-RegisterNetEvent("wd-spawn")
-AddEventHandler("wd-spawn", function()
+RegisterNetEvent("hm-spawnmotor")
+AddEventHandler("hm-spawnmotor", function()
     local player = PlayerPedId()
     local coords = GetEntityCoords(player)
     local heading = GetEntityHeading(player)
@@ -14,7 +14,7 @@ AddEventHandler("wd-spawn", function()
     SetPedIntoVehicle(player, vehicle, -1)
     SetEntityAsMissionEntity(vehicle, true, true)
     SetVehicleHasBeenOwnedByPlayer(vehicle, true)
-
+    
     Citizen.CreateThread(function()
         while DoesEntityExist(vehicle) do
             Wait(100)
@@ -22,7 +22,7 @@ AddEventHandler("wd-spawn", function()
                 Wait(1000) 
                 if DoesEntityExist(vehicle) then
                     DeleteEntity(vehicle)
-                    TriggerEvent("okokNotify:Alert", "Vehicle", "Your motorbike is deleted!", 3500, "info")
+                    TriggerEvent("okokNotify:Alert", "Voertuig", "Je motor is verwijderd!", 3500, "info")
                 end
                 break
             end
