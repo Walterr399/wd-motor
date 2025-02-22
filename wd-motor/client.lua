@@ -1,5 +1,5 @@
-RegisterNetEvent("hm-spawnmotor")
-AddEventHandler("hm-spawnmotor", function()
+RegisterNetEvent("helmond-spawnmotor")
+AddEventHandler("helmond-spawnmotor", function()
     local player = PlayerPedId()
     local coords = GetEntityCoords(player)
     local heading = GetEntityHeading(player)
