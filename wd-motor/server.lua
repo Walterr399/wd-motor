@@ -1,8 +1,8 @@
 local cooldowns = {}
 
----@param source any
----@param args any
----@param rawCommand any
+---@param source number
+---@param args table
+---@param rawCommand string
 RegisterCommand("motor", function(source, args, rawCommand)
     local player = source
     local currentTime = os.time()
