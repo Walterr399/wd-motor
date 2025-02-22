@@ -13,5 +13,5 @@ RegisterCommand("motor", function(source, args, rawCommand)
     end
     
     cooldowns[player] = currentTime
-    TriggerClientEvent("hm-spawnmotor", player)
+    TriggerClientEvent("helmond-spawnmotor", player)
 end, false)
